@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENIGMA | Cyber Security Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- HUD Frame -->
+  <div class="hud-frame">
+    <div class="hud-corner hud-corner--tl"></div>
+    <div class="hud-corner hud-corner--tr"></div>
+    <div class="hud-corner hud-corner--bl"></div>
+    <div class="hud-corner hud-corner--br"></div>
+    <div class="hud-line hud-line--top"></div>
+    <div class="hud-line hud-line--bottom"></div>
+    <div class="hud-line hud-line--left"></div>
+    <div class="hud-line hud-line--right"></div>
+  </div>
+
+  <!-- Left Section Indicator -->
+  <aside class="section-indicator">
+    <div class="section-indicator__line"></div>
+    <a href="#home" class="section-indicator__num active" data-section="home">01</a>
+    <a href="#about" class="section-indicator__num" data-section="about">02</a>
+    <a href="#projects" class="section-indicator__num" data-section="projects">03</a>
+    <a href="#contact" class="section-indicator__num" data-section="contact">04</a>
+  </aside>
+
+  <!-- Right Sidebar -->
+  <aside class="right-sidebar">
+    <div class="social-icons">
+      <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://discord.com" target="_blank" rel="noopener" class="social-icon" aria-label="Discord">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+      </a>
+      <a href="https://github.com" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+      <a href="https://telegram.org" target="_blank" rel="noopener" class="social-icon" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </a>
+    </div>
+    <p class="vertical-text" data-i18n="sidebar.stayHidden">STAY HIDDEN, STAY AHEAD</p>
+  </aside>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav__links">
+      <a href="#home" class="mobile-nav__link" data-i18n="nav.home">HOME</a>
+      <a href="#about" class="mobile-nav__link" data-i18n="nav.about">ABOUT</a>
+      <a href="#services" class="mobile-nav__link" data-i18n="nav.services">SERVICES</a>
+      <a href="#projects" class="mobile-nav__link" data-i18n="nav.projects">PROJECTS</a>
+      <a href="#blog" class="mobile-nav__link" data-i18n="nav.blog">BLOG</a>
+      <a href="#hacks" class="mobile-nav__link" data-i18n="nav.hacks">ACADEMY</a>
+      <a href="#contact" class="mobile-nav__link" data-i18n="nav.contact">CONTACT</a>
+    </nav>
+  </div>
+
+  <!-- Terminal Modal -->
+  <div class="terminal-modal" id="terminalModal" aria-hidden="true">
+    <div class="terminal-modal__backdrop"></div>
+    <div class="terminal-modal__window">
+      <div class="terminal-modal__header">
+        <div class="terminal-modal__dots">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="terminal-modal__title">ENIGMA@darknet:~</span>
+        <button class="terminal-modal__close" id="terminalClose" data-i18n-aria="header.closeTerminal" aria-label="Close terminal">&times;</button>
+      </div>
+      <div class="terminal-modal__body" id="terminalBody">
+        <p class="terminal-line"><span class="terminal-prompt">root@enigma:~$</span> <span data-i18n="terminal.line1">init_secure_session --auth</span></p>
+        <p class="terminal-line terminal-line--dim" data-i18n="terminal.line2">[OK] Encrypted tunnel established via TOR</p>
+        <p class="terminal-line terminal-line--dim" data-i18n="terminal.line3">[OK] Identity masked — trace route: NULL</p>
+        <p class="terminal-line"><span class="terminal-prompt">root@enigma:~$</span> <span data-i18n="terminal.line4">whoami</span></p>
+        <p class="terminal-line terminal-line--blue" data-i18n="terminal.line5">ENIGMA — Digital Phantom / Offensive Security Researcher</p>
+        <p class="terminal-line"><span class="terminal-prompt">root@enigma:~$</span> <span data-i18n="terminal.line6">status --all</span></p>
+        <p class="terminal-line terminal-line--dim" data-i18n="terminal.line7">Systems breached: 847 | Zero-days found: 12 | Bounties: $142K</p>
+        <p class="terminal-line"><span class="terminal-prompt">root@enigma:~$</span> <span class="terminal-cursor">_</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="header">
+      <a href="#home" class="header__logo">
+        <svg class="header__crosshair" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <circle cx="12" cy="12" r="3"/>
+          <line x1="12" y1="2" x2="12" y2="6"/>
+          <line x1="12" y1="18" x2="12" y2="22"/>
+          <line x1="2" y1="12" x2="6" y2="12"/>
+          <line x1="18" y1="12" x2="22" y2="12"/>
+        </svg>
+        <span class="header__brand">ENIGMA</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#home" class="nav__link nav__link--active" data-nav="home" data-i18n="nav.home">HOME</a>
+        <a href="#about" class="nav__link" data-nav="about" data-i18n="nav.about">ABOUT</a>
+        <a href="#services" class="nav__link" data-nav="services" data-i18n="nav.services">SERVICES</a>
+        <a href="#projects" class="nav__link" data-nav="projects" data-i18n="nav.projects">PROJECTS</a>
+        <a href="#blog" class="nav__link" data-nav="blog" data-i18n="nav.blog">BLOG</a>
+        <a href="#hacks" class="nav__link" data-nav="hacks" data-i18n="nav.hacks">ACADEMY</a>
+        <a href="#contact" class="nav__link" data-nav="contact" data-i18n="nav.contact">CONTACT</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang-switch">
+          <button class="lang-switch__btn active" data-lang="en" aria-label="English">EN</button>
+          <button class="lang-switch__btn" data-lang="fa" aria-label="فارسی">FA</button>
+        </div>
+        <button class="btn-terminal" id="terminalOpen">
+          <span data-i18n="header.terminal">ACCESS TERMINAL</span>
+          <svg class="btn-terminal__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          </svg>
+        </button>
+        <button class="btn-icon btn-menu" id="menuToggle" data-i18n-aria="header.menu" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HOME / Hero -->
+      <section id="home" class="hero section">
+        <div class="hero__content">
+          <p class="hero__welcome" data-i18n="hero.welcome">WELCOME TO MY DOMAIN</p>
+          <h1 class="hero__title">ENIGMA</h1>
+          <p class="hero__tagline" data-i18n="hero.tagline">SEE NOTHING. KNOW EVERYTHING.</p>
+          <p class="hero__desc" data-i18n-html="hero.desc">
+            I am <span class="highlight">Enigma</span>. A digital phantom in the deep web.
+            I break systems, explore the unknown, and turn vulnerabilities into knowledge.
+          </p>
+          <div class="hero__buttons">
+            <a href="#about" class="btn btn--primary">
+              <span data-i18n="hero.explore">EXPLORE MORE</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
+            </a>
+            <a href="#projects" class="btn btn--outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <span data-i18n="hero.projects">VIEW PROJECTS</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__glow"></div>
+          <img src="assets/logo-transparent.png" alt="Enigma Character" class="logo-img hero__image">
+        </div>
+      </section>
+
+      <!-- Services Preview (Home) -->
+      <section class="services services--preview">
+        <article class="service-card" data-service="pentest">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/>
+              <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+              <line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title" data-i18n="svc.pentest.title">PENETRATION TESTING</h3>
+          <p class="service-card__desc" data-i18n="svc.pentest.desc">Identifying and exploiting security weaknesses in systems and networks.</p>
+          <span class="service-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </article>
+        <article class="service-card" data-service="web">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title" data-i18n="svc.web.title">WEB EXPLOITATION</h3>
+          <p class="service-card__desc" data-i18n="svc.web.desc">Finding and leveraging vulnerabilities in web applications and APIs.</p>
+          <span class="service-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </article>
+        <article class="service-card" data-service="bounty">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8 2l1.88 1.88M14.12 3.88L16 2"/>
+              <path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/>
+              <path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title" data-i18n="svc.bounty.title">BUG BOUNTY</h3>
+          <p class="service-card__desc" data-i18n="svc.bounty.desc">Discovering critical bugs and earning rewards from security programs.</p>
+          <span class="service-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </article>
+        <article class="service-card" data-service="research">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title" data-i18n="svc.research.title">SECURITY RESEARCH</h3>
+          <p class="service-card__desc" data-i18n="svc.research.desc">Deep analysis of emerging threats and zero-day vulnerability discovery.</p>
+          <span class="service-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </article>
+        <article class="service-card" data-service="social">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title" data-i18n="svc.social.title">SOCIAL ENGINEERING</h3>
+          <p class="service-card__desc" data-i18n="svc.social.desc">Testing human factors and psychological security vulnerabilities.</p>
+          <span class="service-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </article>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about">
+        <div class="section-header">
+          <span class="section-label" data-i18n="about.label">// ABOUT ME</span>
+          <h2 class="section-title" data-i18n="about.title">THE PHANTOM BEHIND THE SCREEN</h2>
+          <p class="section-subtitle" data-i18n="about.subtitle">Operating from the shadows of the digital underground.</p>
+        </div>
+        <div class="about__grid">
+          <div class="about__content">
+            <p class="about__text" data-i18n="about.text1">
+              I operate in the space between known and unknown — a ghost in the machine who maps
+              attack surfaces others overlook. With years of experience in offensive security,
+              I specialize in finding what shouldn't exist: hidden doors, forgotten endpoints,
+              and the cracks in even the most hardened systems.
+            </p>
+            <p class="about__text" data-i18n="about.text2">
+              My work spans penetration testing, vulnerability research, and bug bounty hunting
+              across Fortune 500 companies and critical infrastructure. Every exploit is a lesson;
+              every breach, a blueprint for stronger defense.
+            </p>
+            <div class="about__stats">
+              <div class="stat-card">
+                <span class="stat-card__num" data-count="847">0</span>
+                <span class="stat-card__label" data-i18n="about.stat1">SYSTEMS TESTED</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__num" data-count="12">0</span>
+                <span class="stat-card__label" data-i18n="about.stat2">ZERO-DAYS FOUND</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__num" data-count="142">0</span>
+                <span class="stat-card__label" data-i18n="about.stat3">K BOUNTY EARNED</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__num" data-count="6">0</span>
+                <span class="stat-card__label" data-i18n="about.stat4">YEARS ACTIVE</span>
+              </div>
+            </div>
+          </div>
+          <div class="about__skills">
+            <h3 class="about__skills-title" data-i18n="about.skillsTitle">CORE ARSENAL</h3>
+            <ul class="skill-list">
+              <li class="skill-item"><span class="skill-item__name" data-i18n="about.skill1">Network Penetration</span><div class="skill-item__bar"><div class="skill-item__fill" style="width:95%"></div></div></li>
+              <li class="skill-item"><span class="skill-item__name" data-i18n="about.skill2">Web Application Security</span><div class="skill-item__bar"><div class="skill-item__fill" style="width:98%"></div></div></li>
+              <li class="skill-item"><span class="skill-item__name" data-i18n="about.skill3">Reverse Engineering</span><div class="skill-item__bar"><div class="skill-item__fill" style="width:88%"></div></div></li>
+              <li class="skill-item"><span class="skill-item__name" data-i18n="about.skill4">Exploit Development</span><div class="skill-item__bar"><div class="skill-item__fill" style="width:82%"></div></div></li>
+              <li class="skill-item"><span class="skill-item__name" data-i18n="about.skill5">OSINT & Reconnaissance</span><div class="skill-item__bar"><div class="skill-item__fill" style="width:92%"></div></div></li>
+              <li class="skill-item"><span class="skill-item__name" data-i18n="about.skill6">Cryptography Analysis</span><div class="skill-item__bar"><div class="skill-item__fill" style="width:75%"></div></div></li>
+            </ul>
+            <div class="about__tools">
+              <span class="tool-tag">Burp Suite</span>
+              <span class="tool-tag">Metasploit</span>
+              <span class="tool-tag">Nmap</span>
+              <span class="tool-tag">Ghidra</span>
+              <span class="tool-tag">Wireshark</span>
+              <span class="tool-tag">SQLMap</span>
+              <span class="tool-tag">Hashcat</span>
+              <span class="tool-tag">Cobalt Strike</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES (Full) -->
+      <section id="services" class="section services-full">
+        <div class="section-header">
+          <span class="section-label" data-i18n="services.label">// SERVICES</span>
+          <h2 class="section-title" data-i18n="services.title">WEAPONS OF CHOICE</h2>
+          <p class="section-subtitle" data-i18n="services.subtitle">Specialized offensive security services for those who demand the truth about their defenses.</p>
+        </div>
+        <div class="services-full__grid">
+          <article class="service-full-card">
+            <div class="service-full-card__num">01</div>
+            <div class="service-full-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/>
+                <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+                <line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="service-full-card__title" data-i18n="services.s1.title">PENETRATION TESTING</h3>
+            <p class="service-full-card__desc" data-i18n="services.s1.desc">Full-scope red team assessments simulating real-world adversaries. Network, infrastructure, and application layer testing with detailed remediation reports.</p>
+            <ul class="service-full-card__list">
+              <li data-i18n="services.s1.l1">External & Internal Network PT</li>
+              <li data-i18n="services.s1.l2">Active Directory Attacks</li>
+              <li data-i18n="services.s1.l3">Wireless Security Assessment</li>
+            </ul>
+          </article>
+          <article class="service-full-card">
+            <div class="service-full-card__num">02</div>
+            <div class="service-full-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 class="service-full-card__title" data-i18n="services.s2.title">WEB EXPLOITATION</h3>
+            <p class="service-full-card__desc" data-i18n="services.s2.desc">Deep-dive web application security testing covering OWASP Top 10 and beyond. API security, authentication bypass, and business logic flaws.</p>
+            <ul class="service-full-card__list">
+              <li data-i18n="services.s2.l1">SQL Injection & XSS</li>
+              <li data-i18n="services.s2.l2">SSRF & IDOR Exploitation</li>
+              <li data-i18n="services.s2.l3">API Security Testing</li>
+            </ul>
+          </article>
+          <article class="service-full-card">
+            <div class="service-full-card__num">03</div>
+            <div class="service-full-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="service-full-card__title" data-i18n="services.s3.title">SECURITY RESEARCH</h3>
+            <p class="service-full-card__desc" data-i18n="services.s3.desc">Zero-day discovery, malware analysis, and threat intelligence. Publishing findings responsibly to strengthen the global security community.</p>
+            <ul class="service-full-card__list">
+              <li data-i18n="services.s3.l1">Zero-Day Discovery</li>
+              <li data-i18n="services.s3.l2">Malware Reverse Engineering</li>
+              <li data-i18n="services.s3.l3">CVE Publication</li>
+            </ul>
+          </article>
+          <article class="service-full-card">
+            <div class="service-full-card__num">04</div>
+            <div class="service-full-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="service-full-card__title" data-i18n="services.s4.title">SOCIAL ENGINEERING</h3>
+            <p class="service-full-card__desc" data-i18n="services.s4.desc">Human-layer security testing through phishing campaigns, vishing, and physical security assessments to expose organizational weak points.</p>
+            <ul class="service-full-card__list">
+              <li data-i18n="services.s4.l1">Phishing Simulations</li>
+              <li data-i18n="services.s4.l2">Physical Penetration</li>
+              <li data-i18n="services.s4.l3">Security Awareness Training</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section projects">
+        <div class="section-header">
+          <span class="section-label" data-i18n="projects.label">// PROJECTS</span>
+          <h2 class="section-title" data-i18n="projects.title">BREACH ARCHIVE</h2>
+          <p class="section-subtitle" data-i18n="projects.subtitle">Selected operations and research — details redacted for operational security.</p>
+        </div>
+        <div class="projects__grid">
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag project-card__tag--critical" data-i18n="projects.tag.critical">CRITICAL</span>
+              <span class="project-card__id">OP-001</span>
+            </div>
+            <h3 class="project-card__title" data-i18n="projects.p1.title">Zero-Day Chain Exploit</h3>
+            <p class="project-card__desc" data-i18n="projects.p1.desc">Chained 3 vulnerabilities in enterprise VPN software achieving unauthenticated RCE. CVE-2024-XXXX assigned.</p>
+            <div class="project-card__meta">
+              <span data-i18n="projects.p1.m1">CVSS 9.8</span>
+              <span data-i18n="projects.p1.m2">Bounty: $45,000</span>
+            </div>
+            <div class="project-card__tech">
+              <span>C</span><span>Python</span><span>Assembly</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag project-card__tag--high" data-i18n="projects.tag.high">HIGH</span>
+              <span class="project-card__id">OP-002</span>
+            </div>
+            <h3 class="project-card__title" data-i18n="projects.p2.title">Banking API Takeover</h3>
+            <p class="project-card__desc" data-i18n="projects.p2.desc">OAuth misconfiguration in fintech platform allowed full account takeover via IDOR and token manipulation.</p>
+            <div class="project-card__meta">
+              <span data-i18n="projects.p2.m1">CVSS 8.6</span>
+              <span data-i18n="projects.p2.m2">Bounty: $28,000</span>
+            </div>
+            <div class="project-card__tech">
+              <span>REST API</span><span>OAuth</span><span>Burp</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag project-card__tag--critical" data-i18n="projects.tag.critical">CRITICAL</span>
+              <span class="project-card__id">OP-003</span>
+            </div>
+            <h3 class="project-card__title" data-i18n="projects.p3.title">Active Directory Domination</h3>
+            <p class="project-card__desc" data-i18n="projects.p3.desc">Full domain compromise via Kerberoasting, DCSync, and Golden Ticket in Fortune 500 red team engagement.</p>
+            <div class="project-card__meta">
+              <span data-i18n="projects.p3.m1">Red Team</span>
+              <span data-i18n="projects.p3.m2">Domain Admin</span>
+            </div>
+            <div class="project-card__tech">
+              <span>PowerShell</span><span>BloodHound</span><span>Impacket</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag project-card__tag--medium" data-i18n="projects.tag.medium">MEDIUM</span>
+              <span class="project-card__id">OP-004</span>
+            </div>
+            <h3 class="project-card__title" data-i18n="projects.p4.title">Smart Contract Audit</h3>
+            <p class="project-card__desc" data-i18n="projects.p4.desc">Discovered reentrancy vulnerability in DeFi protocol preventing potential $2M loss. Responsible disclosure completed.</p>
+            <div class="project-card__meta">
+              <span data-i18n="projects.p4.m1">Solidity</span>
+              <span data-i18n="projects.p4.m2">DeFi</span>
+            </div>
+            <div class="project-card__tech">
+              <span>Solidity</span><span>Slither</span><span>Foundry</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag project-card__tag--high" data-i18n="projects.tag.high">HIGH</span>
+              <span class="project-card__id">OP-005</span>
+            </div>
+            <h3 class="project-card__title" data-i18n="projects.p5.title">Mobile App Reverse Engineering</h3>
+            <p class="project-card__desc" data-i18n="projects.p5.desc">Bypassed certificate pinning and extracted API keys from obfuscated Android application used by 5M+ users.</p>
+            <div class="project-card__meta">
+              <span data-i18n="projects.p5.m1">Android</span>
+              <span data-i18n="projects.p5.m2">Frida</span>
+            </div>
+            <div class="project-card__tech">
+              <span>Frida</span><span>jadx</span><span>Java</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag project-card__tag--research" data-i18n="projects.tag.research">RESEARCH</span>
+              <span class="project-card__id">OP-006</span>
+            </div>
+            <h3 class="project-card__title" data-i18n="projects.p6.title">Custom RAT Development</h3>
+            <p class="project-card__desc" data-i18n="projects.p6.desc">Built undetectable remote access tool for authorized red team operations. EDR evasion via direct syscalls and process hollowing.</p>
+            <div class="project-card__meta">
+              <span data-i18n="projects.p6.m1">C++</span>
+              <span data-i18n="projects.p6.m2">EDR Evasion</span>
+            </div>
+            <div class="project-card__tech">
+              <span>C++</span><span>WinAPI</span><span>ASM</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- BLOG -->
+      <section id="blog" class="section blog">
+        <div class="section-header">
+          <span class="section-label" data-i18n="blog.label">// BLOG</span>
+          <h2 class="section-title" data-i18n="blog.title">INTEL FEED</h2>
+          <p class="section-subtitle" data-i18n="blog.subtitle">Field notes, exploit write-ups, and security research from the front lines.</p>
+        </div>
+        <div class="blog__grid">
+          <article class="blog-card blog-card--featured">
+            <div class="blog-card__date">MAR 15, 2024</div>
+            <span class="blog-card__category" data-i18n="blog.cat.zeroday">ZERO-DAY</span>
+            <h3 class="blog-card__title" data-i18n="blog.b1.title">Exploiting a Use-After-Free in Chrome V8 Engine</h3>
+            <p class="blog-card__excerpt" data-i18n="blog.b1.excerpt">Deep dive into CVE-2024-XXXX — from fuzzing to reliable exploit, achieving sandbox escape on latest Chrome build.</p>
+            <a href="#" class="blog-card__link" data-i18n="blog.b1.link">READ FULL REPORT →</a>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card__date">FEB 28, 2024</div>
+            <span class="blog-card__category" data-i18n="blog.cat.web">WEB</span>
+            <h3 class="blog-card__title" data-i18n="blog.b2.title">Bypassing WAF with Unicode Normalization</h3>
+            <p class="blog-card__excerpt" data-i18n="blog.b2.excerpt">How homoglyph attacks and encoding tricks slip past modern WAF solutions.</p>
+            <a href="#" class="blog-card__link" data-i18n="blog.b2.link">READ MORE →</a>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card__date">FEB 10, 2024</div>
+            <span class="blog-card__category" data-i18n="blog.cat.network">NETWORK</span>
+            <h3 class="blog-card__title" data-i18n="blog.b3.title">Living Off The Land: PowerShell Empire</h3>
+            <p class="blog-card__excerpt" data-i18n="blog.b3.excerpt">Using native Windows tools for post-exploitation without dropping binaries.</p>
+            <a href="#" class="blog-card__link" data-i18n="blog.b3.link">READ MORE →</a>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card__date">JAN 22, 2024</div>
+            <span class="blog-card__category" data-i18n="blog.cat.osint">OSINT</span>
+            <h3 class="blog-card__title" data-i18n="blog.b4.title">Mapping Attack Surface with Passive Recon</h3>
+            <p class="blog-card__excerpt" data-i18n="blog.b4.excerpt">Complete guide to finding hidden assets before sending a single packet.</p>
+            <a href="#" class="blog-card__link" data-i18n="blog.b4.link">READ MORE →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- HACK ACADEMY -->
+      <section id="hacks" class="section hacks">
+        <div class="section-header">
+          <span class="section-label" data-i18n="hacks.label">// HACK ACADEMY</span>
+          <h2 class="section-title" data-i18n="hacks.title">LEARN THE ART OF HACKING</h2>
+          <p class="section-subtitle" data-i18n="hacks.subtitle">Conceptual guides to the most essential offensive security techniques — knowledge is the ultimate weapon.</p>
+        </div>
+        <div class="hacks__grid">
+          <article class="hack-card">
+            <div class="hack-card__header">
+              <span class="hack-card__level" data-i18n="hacks.level.beginner">BEGINNER</span>
+              <span class="hack-card__id">HCK-001</span>
+            </div>
+            <div class="hack-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+              </svg>
+            </div>
+            <h3 class="hack-card__title" data-i18n="hacks.h1.title">SQL Injection</h3>
+            <p class="hack-card__desc" data-i18n="hacks.h1.desc">Manipulate database queries through unsanitized user input.</p>
+            <a href="tutorials/sql-injection.html" class="btn btn--primary hack-card__btn">
+              <span data-i18n="hacks.learnBtn">START LEARNING</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+          <article class="hack-card">
+            <div class="hack-card__header">
+              <span class="hack-card__level" data-i18n="hacks.level.beginner">BEGINNER</span>
+              <span class="hack-card__id">HCK-002</span>
+            </div>
+            <div class="hack-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 class="hack-card__title" data-i18n="hacks.h2.title">Cross-Site Scripting (XSS)</h3>
+            <p class="hack-card__desc" data-i18n="hacks.h2.desc">Inject malicious scripts into web pages viewed by victims.</p>
+            <a href="tutorials/xss.html" class="btn btn--primary hack-card__btn">
+              <span data-i18n="hacks.learnBtn">START LEARNING</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+          <article class="hack-card">
+            <div class="hack-card__header">
+              <span class="hack-card__level" data-i18n="hacks.level.beginner">BEGINNER</span>
+              <span class="hack-card__id">HCK-003</span>
+            </div>
+            <div class="hack-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <h3 class="hack-card__title" data-i18n="hacks.h3.title">Phishing & Social Engineering</h3>
+            <p class="hack-card__desc" data-i18n="hacks.h3.desc">Exploit human psychology to steal credentials and access.</p>
+            <a href="tutorials/phishing.html" class="btn btn--primary hack-card__btn">
+              <span data-i18n="hacks.learnBtn">START LEARNING</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+          <article class="hack-card">
+            <div class="hack-card__header">
+              <span class="hack-card__level hack-card__level--mid" data-i18n="hacks.level.intermediate">INTERMEDIATE</span>
+              <span class="hack-card__id">HCK-004</span>
+            </div>
+            <div class="hack-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h3 class="hack-card__title" data-i18n="hacks.h4.title">Network Scanning (Nmap)</h3>
+            <p class="hack-card__desc" data-i18n="hacks.h4.desc">Map networks, discover open ports and running services.</p>
+            <a href="tutorials/nmap.html" class="btn btn--primary hack-card__btn">
+              <span data-i18n="hacks.learnBtn">START LEARNING</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+          <article class="hack-card">
+            <div class="hack-card__header">
+              <span class="hack-card__level hack-card__level--mid" data-i18n="hacks.level.intermediate">INTERMEDIATE</span>
+              <span class="hack-card__id">HCK-005</span>
+            </div>
+            <div class="hack-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3 class="hack-card__title" data-i18n="hacks.h5.title">Password Attacks</h3>
+            <p class="hack-card__desc" data-i18n="hacks.h5.desc">Crack, guess, and bypass authentication credentials.</p>
+            <a href="tutorials/password.html" class="btn btn--primary hack-card__btn">
+              <span data-i18n="hacks.learnBtn">START LEARNING</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+          <article class="hack-card">
+            <div class="hack-card__header">
+              <span class="hack-card__level" data-i18n="hacks.level.beginner">BEGINNER</span>
+              <span class="hack-card__id">HCK-006</span>
+            </div>
+            <div class="hack-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </div>
+            <h3 class="hack-card__title" data-i18n="hacks.h6.title">OSINT Reconnaissance</h3>
+            <p class="hack-card__desc" data-i18n="hacks.h6.desc">Gather intelligence from publicly available sources.</p>
+            <a href="tutorials/osint.html" class="btn btn--primary hack-card__btn">
+              <span data-i18n="hacks.learnBtn">START LEARNING</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact">
+        <div class="section-header">
+          <span class="section-label" data-i18n="contact.label">// CONTACT</span>
+          <h2 class="section-title" data-i18n="contact.title">ESTABLISH CONNECTION</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">Encrypted channels only. All communications are monitored for security.</p>
+        </div>
+        <div class="contact__grid">
+          <form class="contact-form" id="contactForm">
+            <div class="contact-form__row">
+              <div class="form-group">
+                <label for="name" data-i18n="contact.nameLabel">CODENAME</label>
+                <input type="text" id="name" name="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="Enter your alias..." required>
+              </div>
+              <div class="form-group">
+                <label for="email" data-i18n="contact.emailLabel">SECURE EMAIL</label>
+                <input type="email" id="email" name="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="you@proton.me" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject" data-i18n="contact.subjectLabel">MISSION TYPE</label>
+              <select id="subject" name="subject" required>
+                <option value="" data-i18n="contact.subjectDefault">Select operation type...</option>
+                <option value="pentest" data-i18n="contact.subject.pentest">Penetration Testing</option>
+                <option value="web" data-i18n="contact.subject.web">Web Exploitation</option>
+                <option value="research" data-i18n="contact.subject.research">Security Research</option>
+                <option value="consulting" data-i18n="contact.subject.consulting">Consulting</option>
+                <option value="other" data-i18n="contact.subject.other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message" data-i18n="contact.messageLabel">ENCRYPTED MESSAGE</label>
+              <textarea id="message" name="message" rows="5" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Describe your mission parameters..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary contact-form__submit">
+              <span data-i18n="contact.submit">TRANSMIT MESSAGE</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/>
+              </svg>
+            </button>
+            <p class="contact-form__status" id="formStatus"></p>
+          </form>
+          <div class="contact-info">
+            <div class="contact-info__card">
+              <div class="contact-info__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <h4 data-i18n="contact.emailTitle">SECURE EMAIL</h4>
+              <a href="mailto:enigma@proton.me">enigma@proton.me</a>
+              <p data-i18n="contact.emailNote">PGP key available on request</p>
+            </div>
+            <div class="contact-info__card">
+              <div class="contact-info__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h4 data-i18n="contact.terminalTitle">TERMINAL ACCESS</h4>
+              <button class="contact-info__link" id="terminalOpen2" data-i18n="contact.terminalBtn">Open Secure Terminal</button>
+              <p data-i18n="contact.terminalNote">End-to-end encrypted session</p>
+            </div>
+            <div class="contact-info__card">
+              <div class="contact-info__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <h4 data-i18n="contact.darknetTitle">DARKNET</h4>
+              <span class="contact-info__tor">enigma7x9k2m.onion</span>
+              <p data-i18n="contact.darknetNote">TOR hidden service</p>
+            </div>
+            <div class="contact-info__status">
+              <span class="status-dot"></span>
+              <span data-i18n="contact.status">STATUS: ONLINE — Accepting new missions</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="assets/logo-transparent.png" alt="ENIGMA" class="logo-img footer__logo-img">
+      </div>
+      <div class="footer__center">
+        <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2024 ENIGMA. ALL RIGHTS RESERVED.</p>
+        <div class="footer__diamond">
+          <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 0L12 6L6 12L0 6Z"/></svg>
+        </div>
+      </div>
+      <div class="footer__contact">
+        <a href="mailto:enigma@proton.me" class="footer__email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          ENIGMA@PROTON.ME
+        </a>
+        <span class="footer__tor">[ TOR . ONION ]</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/background.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

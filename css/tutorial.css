@@ -1,0 +1,166 @@
+.tutorial-shell {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 80px 60px;
+  min-height: 100vh;
+}
+
+.tutorial-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tutorial-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--blue);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.tutorial-back:hover {
+  color: var(--blue-bright);
+  text-shadow: 0 0 10px var(--blue-glow);
+}
+
+.tutorial-hero {
+  margin-bottom: 48px;
+}
+
+.tutorial-hero__label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 17px;
+  letter-spacing: 0.3em;
+  color: var(--blue);
+  margin-bottom: 16px;
+}
+
+.tutorial-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6.5vw, 62px);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 20px var(--blue-glow-soft);
+  margin-bottom: 12px;
+}
+
+.tutorial-hero__meta {
+  font-family: var(--font-display);
+  font-size: 17px;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+  margin-bottom: 24px;
+}
+
+.tutorial-hero__intro {
+  font-size: 24px;
+  line-height: 1.8;
+  color: var(--text-dim);
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+}
+
+html[dir="rtl"] .tutorial-hero__intro {
+  border-left: 1px solid var(--border);
+  border-right: 3px solid var(--blue);
+}
+
+.tutorial-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.tutorial-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 28px 32px;
+  position: relative;
+  transition: border-color 0.3s;
+}
+
+.tutorial-section:hover {
+  border-color: rgba(0, 168, 232, 0.5);
+}
+
+.tutorial-section__num {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 900;
+  color: rgba(0, 168, 232, 0.12);
+  position: absolute;
+  top: 16px;
+  right: 24px;
+}
+
+html[dir="rtl"] .tutorial-section__num {
+  right: auto;
+  left: 24px;
+}
+
+.tutorial-section__title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--blue-bright);
+  margin-bottom: 16px;
+}
+
+.tutorial-section__body {
+  font-size: 22px;
+  line-height: 1.85;
+  color: var(--text-dim);
+}
+
+@media (max-width: 768px) {
+  .tutorial-shell {
+    padding: 24px 20px 40px;
+  }
+}
+
+html[lang="en"] .tutorial-back,
+html[lang="en"] .tutorial-hero__label,
+html[lang="en"] .tutorial-hero__meta {
+  font-size: 13px;
+}
+
+html[lang="en"] .tutorial-hero__title {
+  font-size: clamp(30px, 4.8vw, 46px);
+}
+
+html[lang="en"] .tutorial-hero__intro,
+html[lang="en"] .tutorial-section__title,
+html[lang="en"] .tutorial-section__body {
+  font-size: 16px;
+}
+
+html[lang="en"] .tutorial-section__num {
+  font-size: 28px;
+}
+
+@media (max-width: 768px) {
+  .tutorial-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .tutorial-header__actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
