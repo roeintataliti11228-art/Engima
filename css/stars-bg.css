@@ -1,0 +1,47 @@
+@import url('stars-layers.css');
+
+/* ===== Starfield Background (Uiverse.io by amir_6539) ===== */
+.stars-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.stars-bg__container {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(ellipse at bottom, #0a2840 0%, var(--bg-deep) 100%);
+  overflow: hidden;
+}
+
+.stars-bg #stars,
+.stars-bg #stars2,
+.stars-bg #stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+html[data-theme="light"] .stars-bg__container {
+  background: radial-gradient(ellipse at bottom, #b8d9f0 0%, #eef5fc 100%);
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stars-bg #stars,
+  .stars-bg #stars2,
+  .stars-bg #stars3 {
+    animation: none !important;
+  }
+}

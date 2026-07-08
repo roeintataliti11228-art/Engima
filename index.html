@@ -8,8 +8,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/stars-bg.css">
+  <link rel="stylesheet" href="css/loader.css">
 </head>
 <body>
+  <script src="js/loader.js"></script>
   <!-- HUD Frame -->
   <div class="hud-frame">
     <div class="hud-corner hud-corner--tl"></div>
@@ -119,9 +122,13 @@
           <button class="lang-switch__btn" data-lang="fa" aria-label="فارسی">FA</button>
         </div>
         <button class="btn-terminal" id="terminalOpen">
-          <span data-i18n="header.terminal">ACCESS TERMINAL</span>
-          <svg class="btn-terminal__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+          </svg>
+          <span class="text" data-i18n="header.terminal">ACCESS TERMINAL</span>
+          <span class="circle" aria-hidden="true"></span>
+          <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
           </svg>
         </button>
         <button class="btn-icon btn-menu" id="menuToggle" data-i18n-aria="header.menu" aria-label="Open menu">
@@ -139,7 +146,7 @@
       <section id="home" class="hero section">
         <div class="hero__content">
           <p class="hero__welcome" data-i18n="hero.welcome">WELCOME TO MY DOMAIN</p>
-          <h1 class="hero__title">ENIGMA</h1>
+          <img src="assets/enigma-title.png" alt="ENIGMA" class="hero__title-logo" width="520" height="260">
           <p class="hero__tagline" data-i18n="hero.tagline">SEE NOTHING. KNOW EVERYTHING.</p>
           <p class="hero__desc" data-i18n-html="hero.desc">
             I am <span class="highlight">Enigma</span>. A digital phantom in the deep web.
@@ -147,17 +154,24 @@
           </p>
           <div class="hero__buttons">
             <a href="#about" class="btn btn--primary">
-              <span data-i18n="hero.explore">EXPLORE MORE</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
+              <span class="text" data-i18n="hero.explore">EXPLORE MORE</span>
+              <span class="circle" aria-hidden="true"></span>
+              <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
               </svg>
             </a>
             <a href="#projects" class="btn btn--outline">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                <circle cx="12" cy="12" r="3"/>
+              <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
               </svg>
-              <span data-i18n="hero.projects">VIEW PROJECTS</span>
+              <span class="text" data-i18n="hero.projects">VIEW PROJECTS</span>
+              <span class="circle" aria-hidden="true"></span>
+              <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
             </a>
           </div>
         </div>
@@ -527,8 +541,14 @@
             <h3 class="hack-card__title" data-i18n="hacks.h1.title">SQL Injection</h3>
             <p class="hack-card__desc" data-i18n="hacks.h1.desc">Manipulate database queries through unsanitized user input.</p>
             <a href="tutorials/sql-injection.html" class="btn btn--primary hack-card__btn">
-              <span data-i18n="hacks.learnBtn">START LEARNING</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
+              <span class="text" data-i18n="hacks.learnBtn">START LEARNING</span>
+              <span class="circle" aria-hidden="true"></span>
+              <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
             </a>
           </article>
           <article class="hack-card">
@@ -544,8 +564,14 @@
             <h3 class="hack-card__title" data-i18n="hacks.h2.title">Cross-Site Scripting (XSS)</h3>
             <p class="hack-card__desc" data-i18n="hacks.h2.desc">Inject malicious scripts into web pages viewed by victims.</p>
             <a href="tutorials/xss.html" class="btn btn--primary hack-card__btn">
-              <span data-i18n="hacks.learnBtn">START LEARNING</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
+              <span class="text" data-i18n="hacks.learnBtn">START LEARNING</span>
+              <span class="circle" aria-hidden="true"></span>
+              <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
             </a>
           </article>
           <article class="hack-card">
@@ -562,8 +588,14 @@
             <h3 class="hack-card__title" data-i18n="hacks.h3.title">Phishing & Social Engineering</h3>
             <p class="hack-card__desc" data-i18n="hacks.h3.desc">Exploit human psychology to steal credentials and access.</p>
             <a href="tutorials/phishing.html" class="btn btn--primary hack-card__btn">
-              <span data-i18n="hacks.learnBtn">START LEARNING</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
+              <span class="text" data-i18n="hacks.learnBtn">START LEARNING</span>
+              <span class="circle" aria-hidden="true"></span>
+              <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
             </a>
           </article>
           <article class="hack-card">
@@ -580,8 +612,14 @@
             <h3 class="hack-card__title" data-i18n="hacks.h4.title">Network Scanning (Nmap)</h3>
             <p class="hack-card__desc" data-i18n="hacks.h4.desc">Map networks, discover open ports and running services.</p>
             <a href="tutorials/nmap.html" class="btn btn--primary hack-card__btn">
-              <span data-i18n="hacks.learnBtn">START LEARNING</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
+              <span class="text" data-i18n="hacks.learnBtn">START LEARNING</span>
+              <span class="circle" aria-hidden="true"></span>
+              <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
             </a>
           </article>
           <article class="hack-card">
@@ -598,8 +636,14 @@
             <h3 class="hack-card__title" data-i18n="hacks.h5.title">Password Attacks</h3>
             <p class="hack-card__desc" data-i18n="hacks.h5.desc">Crack, guess, and bypass authentication credentials.</p>
             <a href="tutorials/password.html" class="btn btn--primary hack-card__btn">
-              <span data-i18n="hacks.learnBtn">START LEARNING</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
+              <span class="text" data-i18n="hacks.learnBtn">START LEARNING</span>
+              <span class="circle" aria-hidden="true"></span>
+              <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
             </a>
           </article>
           <article class="hack-card">
@@ -615,8 +659,14 @@
             <h3 class="hack-card__title" data-i18n="hacks.h6.title">OSINT Reconnaissance</h3>
             <p class="hack-card__desc" data-i18n="hacks.h6.desc">Gather intelligence from publicly available sources.</p>
             <a href="tutorials/osint.html" class="btn btn--primary hack-card__btn">
-              <span data-i18n="hacks.learnBtn">START LEARNING</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
+              <span class="text" data-i18n="hacks.learnBtn">START LEARNING</span>
+              <span class="circle" aria-hidden="true"></span>
+              <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
             </a>
           </article>
         </div>
@@ -657,9 +707,13 @@
               <textarea id="message" name="message" rows="5" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Describe your mission parameters..." required></textarea>
             </div>
             <button type="submit" class="btn btn--primary contact-form__submit">
-              <span data-i18n="contact.submit">TRANSMIT MESSAGE</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/>
+              <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
+              </svg>
+              <span class="text" data-i18n="contact.submit">TRANSMIT MESSAGE</span>
+              <span class="circle" aria-hidden="true"></span>
+              <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/>
               </svg>
             </button>
             <p class="contact-form__status" id="formStatus"></p>
